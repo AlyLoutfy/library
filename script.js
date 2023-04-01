@@ -1,4 +1,10 @@
 let myLibrary = [];
+const addBookForm = document.querySelector('.add-form form');
+const addBookBtn = document.querySelector('.add-book');
+const overlay = document.querySelector('.overlay');
+
+addBookBtn.onclick = displayForm;
+overlay.onclick = removeOverlay;
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -12,6 +18,16 @@ Book.prototype.info = function () {
 }
 
 function addBookToLibrary() {
+}
+
+function displayForm() {
+  addBookForm.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function removeOverlay() {
+  addBookForm.classList.remove('active');
+  overlay.classList.remove('active');
 }
 
 const HP = new Book('Harry Potter', 'J.K.', 594, "read");
