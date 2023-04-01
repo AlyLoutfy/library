@@ -133,7 +133,7 @@ body {
   transform: rotate(360deg) scale(1.4);
 }
 
-@media only screen and (max-device-width: 768px) {
+@media (max-width: 750px) {
   .header {
     width: 80%;
     gap: 0px;
