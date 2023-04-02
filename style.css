@@ -9,6 +9,7 @@
 *::before {
   box-sizing: border-box;
   padding: 0;
+  transition: 400ms all ease-in-out 50ms;
   margin: 0;
 }
 
@@ -26,6 +27,7 @@ body {
 }
 
 .header {
+  /* position: fixed; */
   margin-top: 30px;
   display: flex;
   width: 60%;
@@ -40,7 +42,7 @@ body {
   font-weight: 600;
 }
 
-.title,
+.header .title,
 .add-book {
   display: flex;
   align-items: center;
@@ -48,11 +50,43 @@ body {
   cursor: pointer;
 }
 
+/* Book Card */
+
+.book-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 65%;
+  margin: 30px 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 25px;
+  min-height: 250px;
+  width: 170px;
+}
+
+.read {
+  margin-top: auto;
+}
+
 /* Add Book Form */
 
 .add-form form {
   z-index: 1;
-  position: sticky;
+  left: 41.5%;
+  top: 25%;
+  position: absolute;
   width: 250px;
   background-color: rgb(232, 232, 232);
   color: black;
@@ -60,7 +94,6 @@ body {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  margin-top: 15vh;
   gap: 16px;
   transform: scale(0);
 }
