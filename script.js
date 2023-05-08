@@ -7,15 +7,17 @@ const overlay = document.querySelector('.overlay');
 addBookBtn.onclick = displayForm;
 overlay.onclick = removeOverlay;
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 
-Book.prototype.info = function () {
-  return `The book ${this.title} by ${this.author}, ${this.pages} pages, ${this.read}.`;
+  info() {
+    return `The book ${this.title} by ${this.author}, ${this.pages} pages, ${this.read}.`;
+  }
 }
 
 function addBookToLibrary(book) {
